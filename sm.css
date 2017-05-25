@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+  
+
+
+
+
+
+   .quote {
+      background: rgba(0, 0, 0, 0.56);
+      border-radius: 19px;
+	    font-family: open sans condensed;
+    color: white;
+  
+    height: 220px;
+    
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-y: 100%;
+    background-attachment: fixed;
+    text-shadow: 1px 1px 1px #333333;
+	    
+    
+  
+
+
+  }
