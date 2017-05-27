@@ -19,6 +19,7 @@
    			<div class="col-md-12">
    				<caption><h2>Các chức năng của cơ bản</h2></caption>
 				<a href="profile.php"><div class="btn btn-lg btn-success">Trang thông tin cá nhân</div></a>
+				<a href="doipass.php"><div class="btn btn-lg btn-primary">Đổi mật khẩu</div></a>
 			</div>
 		</div>
   		
