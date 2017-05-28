@@ -25,7 +25,15 @@
 		<img src="<?php echo "$row1[HinhAnh]"; ?>" class="img-circle" width="304" height="236" alt="User Pic">
 
 
-
+		<div>Để đổi ảnh đại diện, dán link ảnh mới vào ô dưới và ấn cập nhật.<br>Dưới đây là một số host miễn phí.</div>
+  		<ul>
+			<li>http://imgur.com/</li>
+			<li>http://tinypic.com/</li>
+			<li>https://postimage.org/</li>
+			<li>https://imgsafe.org/</li>
+		</ul>
+   		<input name="capnhatanh" class="input-lg" placeholder="Link ảnh" id="linkanh">
+   		<input class="btn btn-primary" id="capnhatanh" value="Cập nhật">
     </div>
 	<div class="container">
       <div class="row">

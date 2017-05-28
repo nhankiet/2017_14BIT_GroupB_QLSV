@@ -31,12 +31,14 @@
 				$matkhau = $_POST["matkhau".$i];
 				$lop = $_POST["lop".$i];
 				
-
-				$str_themsinhvien.="('$hoten', '$phai', '$ngaysinh', '$diachi', '$sdt', '$email', '$matkhau', '$lop', 'Đang hoạt động', 3), ";
-				
+				if($email!=="" && $hoten!=="" && $matkhau!="")
+				{
+					$str_themsinhvien.="('$hoten', '$phai', '$ngaysinh', '$diachi', '$sdt', '$email', '$matkhau', '$lop', 'Đang hoạt động', 3), ";
+				}
 			}
 			$str_themsinhvien = rtrim($str_themsinhvien, ", ");
 			mysqli_query($conn, $str_themsinhvien);
+			echo $str_themsinhvien;
 		}
 	?>
 	
@@ -69,6 +71,7 @@
   			<div class="btn btn-block">
   			<label>Chọn số lượng dòng</label>
   			<select class="input-sm" id="sldong">
+				<option value="2">2</option>
 				<option value="5">5</option>
 				<option value="10">10</option>
 				<option value="20">20</option>
@@ -81,9 +84,9 @@
 				<div class="col-lg-8">
 					<div class="alert alert-warning alert-dismissable">
 						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						<strong>Lưu ý:</strong>
+						<strong>Lưu ý:</strong> Các cột Họ Tên, Email và Mật khẩu bắt buộc phải nhập, tuy nhiên có thể chọn và nhập bao nhiêu dòng tùy thích (ví dụ chọn 5 dòng nhưng chỉ nhập 1 dòng vẫn được chấp nhận, tuy nhiên phải đảm bảo dòng mà bạn nhập cột Họ Tên, Email, Mật Khẩu phải nhập hợp lệ)<hr>
 						_ Email phải có @.<hr>
-						_ Mật khẩu tối thiểu là 8 ký tự, trong đó yêu cầu ít nhất 1 ký tự viết hoa, ít nhất 1 ký tự viết thường và ít nhất 1 chữ số.
+						_ Tối thiểu là 8 ký tự, trong đó yêu cầu ít nhất 1 ký tự viết hoa, ít nhất 1 ký tự viết thường và ít nhất 1 chữ số.
 					
 					</div>
 					</div>

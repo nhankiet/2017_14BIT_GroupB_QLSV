@@ -1,7 +1,7 @@
 	<?php require("header.php"); ?>
 	<title>Trang điều khiển Admin</title>
 	<link rel="stylesheet" href="css/style.css">
-	
+
 </head>
 
 
@@ -19,9 +19,10 @@
    			<div class="col-md-12">
    				<caption><h2>Các chức năng của cơ bản</h2></caption>
 				<a href="profile.php"><div class="btn btn-lg btn-success">Trang thông tin cá nhân</div></a>
+				<a href="doipass.php"><div class="btn btn-lg btn-primary">Đổi mật khẩu</div></a>
 			</div>
 		</div>
-  		
+
    		<div class="row">
    			<div class="col-md-12">
 			<table class="table text-center">
@@ -33,7 +34,7 @@
 						<th>Thêm</th>
 						<th>Xóa</th>
 						<th>Cập nhật</th>
-					<tr>	
+					<tr>
 				</thead>
 
 				<tbody>
@@ -48,6 +49,7 @@
 						<td>
 							<a href="admin-themgiangvien.php"><div class="btn btn-primary">Thêm Giảng Viên</div></a><br><br>
 							<a href="admin-themsinhvien.php"><div class="btn btn-primary">Thêm Sinh Viên</div></a>
+							<a href="admin-timkiemsinhvien.php"><div class="btn btn-primary">Tìm Sinh Viên</div></a>
 						</td>
 						<td><a href="admin-xoanguoidung.php"><div class="btn btn-danger">Xóa</div></a></td>
 						<td><a href="admin-capnhatnguoidung.php"><div class="btn btn-warning">Cập nhật</div></a></td>
@@ -70,14 +72,14 @@
 						<td><a href="admin-xoaketqua.php"><div class="btn btn-danger">Xóa</div></a></td>
 					</tr>
 
-					
-					
+
+
 				</tbody>
 			</table>
-			
+
 			</div>
 		</div>
 	</div>
-  
+
 
 <?php require("footer.php") ?>

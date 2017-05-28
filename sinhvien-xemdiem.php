@@ -28,9 +28,9 @@
 					$row1 = mysqli_fetch_array($kq_laythongtin);
 				?>
 				
-				<div class="col-lg-4"><h4>MSSV: <span class="btn btn-lg btn-default"><?php echo"$row1[MaUser]"; ?></span></h4></div>
-				<div class="col-lg-4"><h4>Họ tên: <span class="btn btn-lg btn-default"><?php echo"$row1[HoTen]"; ?></span></h4></div>
-				<div class="col-lg-4"><h4>Lớp: <span class="btn btn-lg btn-default"><?php echo"$row1[MaLop]"; ?></span></h4></div>
+				<div class="col-lg-4"><h4>MSSV: <?php echo"$row1[MaUser]"; ?></h4></div>
+				<div class="col-lg-4"><h4>Họ tên: <?php echo"$row1[HoTen]"; ?></h4></div>
+				<div class="col-lg-4"><h4>Lớp: <?php echo"$row1[MaLop]"; ?></h4></div>
 					
 				<hr><hr><hr><hr>		
 				<table class="table table-bordered">
@@ -78,7 +78,10 @@
 							$i++;
 							$tongdiem+=$row2[DiemTongKet];
 						}
-						$dtb = $tongdiem/$i;
+						if($i!==0)
+						{
+							$dtb = $tongdiem/$i;
+						}
 					?>
 					</tbody>
 				</table>

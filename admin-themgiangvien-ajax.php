@@ -18,7 +18,8 @@
 		<td><input class='input-sm' name='diachi$i' placeholder='Địa chỉ'></td>
 		<td><input class='input-sm' name='sdt$i' type='tel' placeholder='Số điện thoại' maxlength='20'></td>
 		<td><input class='input-sm' name='email$i' type='email' placeholder='Email'></td>
-		<td><input class='input-sm' name='matkhau$i' placeholder='Mật khẩu'></td>
+		<td><input class='input-sm' name='matkhau$i' placeholder='Mật khẩu'
+		pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' title='Tối thiểu là 8 ký tự, trong đó yêu cầu ít nhất 1 ký tự viết hoa, ít nhất 1 ký tự viết thường và ít nhất 1 chữ số.'></td>
 		
 	</tr>
 	";

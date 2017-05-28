@@ -58,7 +58,7 @@
         <div class="container">
           <div class="row">
         <div class="quote col-sm-7 col-xs-12">
-        <h1>Chào mừng đã đến trang Quản Lý Sinh Viên của nhóm B</h1>
+        <h1>Chào mừng đã đến trang Quản Lý Sinh Viên của nhóm BHKT</h1>
                 <?php 
 					if(isset($_SESSION[userid]))
 					{

