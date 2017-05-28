@@ -33,6 +33,7 @@
  </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!--<script>
 	$(document).ready(function(){
 		$(".Chn").click(function(){
@@ -54,6 +55,9 @@
 =======
 
 >>>>>>> 01c5bb40e4046381533c7dd214315c05dc3368c3
+=======
+
+>>>>>>> c44e1547fb8af619fc90ce4fb9a06602a8ff6e9a
 <?php
 	if(isset($_POST["CHN"])&&($_POST["CHN"]=="Đổi mật khẩu"))
 	{	
