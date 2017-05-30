@@ -1,7 +1,7 @@
 <?php require("header.php"); ?>
 	<title>Trang chủ</title>
 </head>
-
+<!-- Chỉnh sửa by T.Kiet -->
 
 <body id="page-top" class="index">
     <?php require("topnavbar.php"); ?>
@@ -42,24 +42,24 @@
             <span class="icon-next"></span>
         </a>
     </header>
-    
-   
+
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 center-block">
-               
+
             </div>
         </div>
     </div>
-    
-                    
-                    
-      
+
+
+
+
         <div class="container">
           <div class="row">
         <div class="quote col-sm-7 col-xs-12">
         <h1>Chào mừng đã đến trang Quản Lý Sinh Viên của nhóm BHKT</h1>
-                <?php 
+                <?php
 					if(isset($_SESSION[userid]))
 					{
 						echo "Chào mừng <span class='userwel'>$_SESSION[userhoten]</span> đã đăng nhập vào hệ thống, chúc bạn một ngày tốt lành";
@@ -68,13 +68,13 @@
       </div>
       </div>
       </div>
-    
-  
-                    
-                    
-                    
 
-                    
 
-    
+
+
+
+
+
+
+
 <?php require("footer.php"); ?>
