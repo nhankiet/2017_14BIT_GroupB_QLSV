@@ -7,7 +7,7 @@
 		$ttsinhvien=mysqli_real_escape_string($conn,$_POST["query"]);
 		$query="
 		select * from user
-		where (HoTen like '%".$ttsinhvien."%' or CAST(MaUser as char) like '%".$ttsinhvien."%' or MaLop like '%".$ttsinhvien."%') and MaLop is not NULL
+		where (HoTen like '%".$ttsinhvien."%' or CAST(MaUser as char) like '%".$ttsinhvien."%' or MaLop like '%".$ttsinhvien."%') and LoaiUser!=1
 		";
 	}
 	/*else {
@@ -21,14 +21,21 @@
 if(mysqli_num_rows($landing) > 0)
 {
 	while($row = mysqli_fetch_array($landing ))
-  {
-   $output .= '
-    <tr>
-     <td>'.$row["MaUser"].'</td>
-     <td>'.$row["HoTen"].'</td>
-     <td>'.$row["MaLop"].'</td>
-    </tr>
-   ';
+  	{
+	   $output .= '
+		<tr>
+		 <td>'.$row["MaUser"].'</td>
+		 <td>'.$row["HoTen"].'</td>
+		 ';
+		if($row[LoaiUser]==2)
+			$output .= '<td>Giảng viên</td>';
+		else
+			$output .= '<td>Sinh viên</td>';
+			
+		$output .= '
+		 <td>'.$row["MaLop"].'</td>
+		</tr>
+	   ';
  	}
 	echo $output;
 }
@@ -36,6 +43,39 @@ else {
 	echo '';
 }
 }
+	
+	
+	$thongtin = $_POST["thongtin"];
+	if($thongtin!="gvgvgv")
+	{
+		$str_laythongtin = "select * from user where MaLop='$thongtin'";
+		$kq_laythongtin = mysqli_query($conn, $str_laythongtin);
+		while($row2 = mysqli_fetch_array($kq_laythongtin))
+		{
+			echo "
+			<tr>
+				<td>$row2[MaUser]</td>
+				<td>$row2[HoTen]</td>
+				<td>Sinh viên</td>
+				<td>$row2[MaLop]</td>
+			</tr>";
+		}
+	}
+	else
+	{
+		$str_laythongtin = "select * from user where LoaiUser=2";
+		$kq_laythongtin = mysqli_query($conn, $str_laythongtin);
+		while($row3 = mysqli_fetch_array($kq_laythongtin))
+		{
+			echo "
+			<tr>
+				<td>$row3[MaUser]</td>
+				<td>$row3[HoTen]</td>
+				<td>Giảng viên</td>
+			</tr>";
+		}
+	}
+	
 
 	/*$ttsinhvien = $_POST["ttsinhvien"];
 

@@ -71,9 +71,15 @@
 						<td><a href="admin-themketqua.php"><div class="btn btn-primary">Thêm - Cập nhật</div></a></td>
 						<td><a href="admin-xoaketqua.php"><div class="btn btn-danger">Xóa</div></a></td>
 					</tr>
-
-
-
+					
+					<tr><td></td></tr>
+					
+					<tr>
+						<td colspan="2"><h2>Các chức năng khác Admin</h2></td>
+					</tr>
+					
+						<td colspan="2"><a href="admin-timkiemsinhvien.php"><div class="btn btn-lg btn-success">Duyệt danh sách User</div></a></td>
+					</tr>
 				</tbody>
 			</table>
 
