@@ -1,5 +1,5 @@
 	<?php require("header.php"); ?>
-	<title>Trang thông tin cá nhân - Profile</title>
+	<title>Trang xem thông tin người dùng - Admin</title>
 	<link rel="stylesheet" href="css/style.css">
 	
 </head>
@@ -10,12 +10,12 @@
 <body>
     <?php require("topnavbar.php") ?>
     <?php
-		if( !(isset($_SESSION["userid"])) )
+		if( !(isset($_SESSION["userid"]) && $_SESSION["userloaiuser"] == 1) )
 			header("Location:index.php");
 	?>
   	<hr><hr><hr>
   	<?php
-		$masv = $_SESSION["userid"];
+		$masv = $_GET["ID"];
 		$str_laythongtin = "select * from user where MaUser='$masv'";
 		$kq_laythongtin = mysqli_query($conn, $str_laythongtin);
 		$row1 = mysqli_fetch_array($kq_laythongtin);
@@ -24,16 +24,6 @@
 	<div class="col-md-3 col-lg-3 " align="center"> 
 		<img src="<?php echo "$row1[HinhAnh]"; ?>" class="img-circle" width="304" height="236" alt="User Pic">
 
-
-		<div>Để đổi ảnh đại diện, dán link ảnh mới vào ô dưới và ấn cập nhật.<br>Dưới đây là một số host miễn phí.</div>
-  		<ul>
-			<li>http://imgur.com/</li>
-			<li>http://tinypic.com/</li>
-			<li>https://postimage.org/</li>
-			<li>https://imgsafe.org/</li>
-		</ul>
-   		<input name="capnhatanh" class="input-lg" placeholder="Link ảnh" id="linkanh">
-   		<input class="btn btn-primary" id="capnhatanh" value="Cập nhật">
     </div>
 	<div class="container">
       <div class="row">
@@ -118,31 +108,24 @@
         </div>
       </div>
     </div>
+    
 
-<script>
-	$(document).ready(function(){
-		$("#capnhatanh").click(function(){
-			var linkanh = $("#linkanh").val();
-			if(linkanh.length>7)
-			{
-				$.post("capnhatanh.php", { linkanh:linkanh }, function(data, status){
-					if(status=="success")
-					{
-						alert("Cập nhật ảnh thành công");
-						location.reload();
-					}
-					else
-					{
-						alert("Cập nhật ảnh thất bại!");
-						location.reload();
-					}
-				});
-			}
-			else
-			{
-				alert("URL quá ngắn, không hợp lệ");		
-			}
-		});
-	});
-</script>	
+	<?php
+	if($row1[LoaiUser]==3)
+	echo "
+	<div class='container'>
+    	<div class='col-lg-3'>
+			<a href='admin-xemdiemsinhvien.php?ID=$row1[MaUser]'>
+    		<div class='btn btn-success btn-lg'>
+					Xem kết quả của sinh viên này
+			</div>
+			</a>
+		</div>
+	</div>
+	";
+			?>
+
+
+
+    
 <?php require("footer.php") ?>

@@ -11,6 +11,8 @@
 	$malop = $_POST["malop"];
 	$sdt = $_POST["sdt"];
 	$diachi = $_POST["diachi"];
+
+	$matkhau = hash("sha512", $matkhau);
 	
 	$str_laythongtinuser = "select * from user where MaUser='$mauser'";
 	$kq_laythongtinuser = mysqli_query($conn, $str_laythongtinuser);
@@ -18,20 +20,28 @@
 	if($row[LoaiUser]==2)
 	{
 
-		$str_capnhatuser = "update user set HoTen='$hoten', Phai='$phai', NgaySinh='$ngaysinh', Email='$email', MatKhau='$matkhau', TinhTrang='$tinhtrang', SoDienThoai='$sdt', DiaChi='$diachi'";
+		$str_capnhatuser = "update user set HoTen='$hoten', Phai='$phai', NgaySinh='$ngaysinh', Email='$email', TinhTrang='$tinhtrang', SoDienThoai='$sdt', DiaChi='$diachi'";
 		if($hinhanh!="")
 		{
 			$str_capnhatuser.=", HinhAnh='$hinhanh'";
+		}
+		if($matkhau!="")
+		{
+			$str_capnhatuser.=", MatKhau='$matkhau'";
 		}
 		$str_capnhatuser.=" where MaUser='$mauser'";
 		mysqli_query($conn, $str_capnhatuser);
 	}
 	else
 	{
-		$str_capnhatuser = "update user set HoTen='$hoten', Phai='$phai', NgaySinh='$ngaysinh', Email='$email', MatKhau='$matkhau', TinhTrang='$tinhtrang', MaLop='$malop', SoDienThoai='$sdt', DiaChi='$diachi'";
+		$str_capnhatuser = "update user set HoTen='$hoten', Phai='$phai', NgaySinh='$ngaysinh', Email='$email', TinhTrang='$tinhtrang', MaLop='$malop', SoDienThoai='$sdt', DiaChi='$diachi'";
 		if($hinhanh!="")
 		{
 			$str_capnhatuser.=", HinhAnh='$hinhanh'";
+		}
+		if($matkhau!="")
+		{
+			$str_capnhatuser.=", MatKhau='$matkhau'";
 		}
 		$str_capnhatuser.=" where MaUser='$mauser'";
 		mysqli_query($conn, $str_capnhatuser);

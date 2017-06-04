@@ -32,38 +32,14 @@
     </form>
  </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!--<script>
-	$(document).ready(function(){
-		$(".Chn").click(function(){
-			var oldpass = $("input[name='oldpass']").val();
-			var newpass1 = $("input[name='newpass1']").val();
-			var newpass2 = $("input[name='newpass2']").val();
-			$.post("doipass-proc.php", { oldpass: oldpass, newpass1: newpass1, newpass2: newpass2 }, function(data, status){
-				if(status=="success")
-				{
-					alert("Đổi mật khẩu thành công");
-					location.reload();
-				}
-				else
-					alert("Đổi mật khẩu thất bại!");
-			});
-		});
-	});
-</script>-->
-=======
-
->>>>>>> 01c5bb40e4046381533c7dd214315c05dc3368c3
-=======
-
->>>>>>> c44e1547fb8af619fc90ce4fb9a06602a8ff6e9a
 <?php
 	if(isset($_POST["CHN"])&&($_POST["CHN"]=="Đổi mật khẩu"))
 	{	
 		$oldpass = $_POST["oldpass"];
 		$newpass1 = $_POST["newpass1"];
 		$newpass2 = $_POST["newpass2"];
+		
+		$oldpass = hash("sha512", $oldpass);
 
 		$str_laythongtinuser = "select * from user where MaUser='$_SESSION[userid]'";
 		$kq_laythongtinuser = mysqli_query($conn, $str_laythongtinuser);
@@ -73,6 +49,7 @@
 		{
 			if($newpass1==$newpass2)
 			{
+				$newpass1 = hash("sha512", $newpass1);
 				$str_doimatkhau = "update user set MatKhau='$newpass1' where MaUser='$row[MaUser]'";
 				mysqli_query($conn, $str_doimatkhau);
 				echo "<script>alert('Đổi mật khẩu thành công!')</script>";

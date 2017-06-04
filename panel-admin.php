@@ -49,7 +49,6 @@
 						<td>
 							<a href="admin-themgiangvien.php"><div class="btn btn-primary">Thêm Giảng Viên</div></a><br><br>
 							<a href="admin-themsinhvien.php"><div class="btn btn-primary">Thêm Sinh Viên</div></a>
-							<a href="admin-timkiemsinhvien.php"><div class="btn btn-primary">Tìm Sinh Viên</div></a>
 						</td>
 						<td><a href="admin-xoanguoidung.php"><div class="btn btn-danger">Xóa</div></a></td>
 						<td><a href="admin-capnhatnguoidung.php"><div class="btn btn-warning">Cập nhật</div></a></td>
@@ -78,6 +77,7 @@
 						<td colspan="2"><h2>Các chức năng khác Admin</h2></td>
 					</tr>
 					
+					<tr>
 						<td colspan="2"><a href="admin-timkiemsinhvien.php"><div class="btn btn-lg btn-success">Duyệt danh sách User</div></a></td>
 					</tr>
 				</tbody>

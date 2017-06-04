@@ -25,7 +25,7 @@ if(mysqli_num_rows($landing) > 0)
 	   $output .= '
 		<tr>
 		 <td>'.$row["MaUser"].'</td>
-		 <td>'.$row["HoTen"].'</td>
+		 <td><a href="admin-xemthongtinnguoidung.php?ID='.$row["MaUser"].'">'.$row["HoTen"].'</a></td>
 		 ';
 		if($row[LoaiUser]==2)
 			$output .= '<td>Giảng viên</td>';
@@ -55,7 +55,7 @@ else {
 			echo "
 			<tr>
 				<td>$row2[MaUser]</td>
-				<td>$row2[HoTen]</td>
+				<td><a href='admin-xemthongtinnguoidung.php?ID=$row2[MaUser]'>$row2[HoTen]</a></td>
 				<td>Sinh viên</td>
 				<td>$row2[MaLop]</td>
 			</tr>";
@@ -69,8 +69,9 @@ else {
 		{
 			echo "
 			<tr>
+			
 				<td>$row3[MaUser]</td>
-				<td>$row3[HoTen]</td>
+				<td><a href='admin-xemthongtinnguoidung.php?ID=$row3[MaUser]'>$row3[HoTen]</a></td>
 				<td>Giảng viên</td>
 			</tr>";
 		}

@@ -62,6 +62,45 @@
 	</div>
 <script>
 $(document).ready(function() {
+		var loaiuser = $("#chonnhomuser").val();
+		$.post("admin-capnhatnguoidung-ajax.php", { loaiuser:loaiuser }, function(data,status){
+				if(status=="success")
+				{
+					$("#landing").html(data);
+					
+					$(".Up").click(function(){
+						var mauser = $(this).attr("name");
+						var hinhanh = $(this).closest("tr").find("input[name='hinhanh']").val();
+						var hoten = $(this).closest("tr").find("input[name='hoten']").val();
+						var phai = $(this).closest("tr").find("select[name='phai']").val();
+						var ngaysinh = $(this).closest("tr").find("input[name='ngaysinh']").val();
+						var email = $(this).closest("tr").find("input[name='email']").val();
+						var matkhau = $(this).closest("tr").find("input[name='matkhau']").val();
+						var tinhtrang = $(this).closest("tr").find("select[name='tinhtrang']").val();
+						var malop = $(this).closest("tr").find("select[name='malop']").val();
+						var sdt = $(this).closest("tr").find("input[name='sdt']").val();
+						var diachi = $(this).closest("tr").find("input[name='diachi']").val();
+
+						if(confirm("Bạn có thực sự muốn cập nhật user "+hoten+" ngày sinh: "+ngaysinh))
+						{
+							$.post("admin-capnhatnguoidung-ajax2.php", { mauser:mauser, hinhanh:hinhanh, hoten:hoten, phai:phai, ngaysinh:ngaysinh, email:email, matkhau:matkhau, tinhtrang:tinhtrang, malop:malop, sdt:sdt, diachi:diachi }, function(data,status){
+								if(status=="success")
+								{
+									alert("Cập nhật thành công user "+hoten);
+									location.reload();
+								}
+							}); 
+						}
+						else
+						{
+							alert ("Bạn đã chọn hủy");
+						}
+					});
+				}
+			}); 
+	
+
+	
 
 	
 	$("#chonnhomuser").change(function(){

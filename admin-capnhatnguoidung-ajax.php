@@ -51,7 +51,8 @@
 			<br>
 			<input name='$row1[MaUser]' class='Up btn btn-success' value='Cập nhật' type='button'>
 			</td>";
-			echo "<td><input value='$row1[MatKhau]' name='matkhau'></td>";
+			echo "<td><input name='matkhau' placeholder='Đê trống nếu không đổi'
+			pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' title='Tối thiểu là 8 ký tự, trong đó yêu cầu ít nhất 1 ký tự viết hoa, ít nhất 1 ký tự viết thường và ít nhất 1 chữ số.'></td>";
 			
 			echo "<td><select name='tinhtrang'><optgroup label='Hiện tại: $row1[TinhTrang]'>
 			<option value='Đang hoạt động'>Đang hoạt động</option>

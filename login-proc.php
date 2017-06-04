@@ -3,7 +3,11 @@
 	require("connection.php");
 
 	$user = $_POST["bhktusername"];
-	$pass = $_POST["bhktpass"];
+	$raw = $_POST["bhktpass"];
+	$pass = hash("sha512", $raw);
+
+
+
 	$str_login = "select * from user where Email='$user' and MatKhau='$pass'";
 	$kq_login = mysqli_fetch_array(mysqli_query($conn, $str_login));
 	if(($user==="$kq_login[Email]") && ($pass===$kq_login[MatKhau]))

@@ -2,6 +2,7 @@
 <title>Tìm kiếm người dùng - Admin</title>
 <link rel="stylesheet" href="css/style.css">
 
+
 </head>
 
 
@@ -24,7 +25,7 @@
       <table class="table table-hover">
         <thead>
           <th><label>Nhập thông tin người dùng</label></th>
-		  <th><label>Chọn theo danh sách lớp</label></th>
+		  <th><label>Chọn theo danh sách</label></th>
         </thead>
 
 
@@ -110,6 +111,8 @@ $(document).ready(function(){
 			}
 		});
 	});	
+
+
 </script>
 
 
