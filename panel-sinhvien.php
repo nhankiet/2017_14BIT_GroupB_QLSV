@@ -33,6 +33,10 @@
 						<td><a href="sinhvien-xemdiem.php"><div class="btn btn-lg btn-success">Xem kết quả</div></a></td>
 						<td><a href="doipass.php"><div class="btn btn-lg btn-default">Đổi mật khẩu</div></a></td>
 					</tr>
+					<tr>
+						<td><a href="sinhvien-guiyeucau.php"><div class="btn btn-lg btn-xl">Gửi yêu cầu</div></a></td>
+						
+					</tr>
 					
 				</tbody>
 			</table>

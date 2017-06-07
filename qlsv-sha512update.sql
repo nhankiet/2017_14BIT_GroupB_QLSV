@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2017 at 02:15 PM
+-- Generation Time: Jun 07, 2017 at 01:53 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -234,13 +234,22 @@ INSERT INTO `user` (`MaUser`, `HoTen`, `Phai`, `NgaySinh`, `DiaChi`, `SoDienThoa
 --
 
 CREATE TABLE `yeucau` (
-  `MaYC` int(11) NOT NULL,
+  `MaYC` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `MaUser` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `Loai` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `TieuDe` text COLLATE utf8_unicode_ci NOT NULL,
   `NoiDung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `ThoiDiemNop` datetime NOT NULL
+  `ThoiDiemNop` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `yeucau`
+--
+
+INSERT INTO `yeucau` (`MaYC`, `MaUser`, `Loai`, `TieuDe`, `NoiDung`, `ThoiDiemNop`) VALUES
+('YC00000001', '35', 'Xin giấy xác nhận sinh viên', 'Xin giấy xác nhận sinh viên', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em xin giấy xác nhận sinh viên. \nEm cảm ơn.\n                         Kim\n', '2017-06-07 13:34:34'),
+('YC00000002', '35', 'Xin phúc khảo', 'Xin phúc khảo môn Web', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, em làm đơn này xin được phúc khảo bài thi cuối kì môn Advance Web Programming.\r\nEm cảm ơn\r\n                       Kim', '2017-06-07 13:48:55'),
+('YC00000003', '35', 'Xin nghỉ học', 'Đơn xin nghỉ học', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em nghỉ buổi học ngày thứ 6 tới.\r\nEm cảm ơn\r\n                      Kim', '2017-06-07 13:52:26');
 
 --
 -- Indexes for dumped tables
@@ -297,11 +306,6 @@ ALTER TABLE `bomon`
 --
 ALTER TABLE `user`
   MODIFY `MaUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
---
--- AUTO_INCREMENT for table `yeucau`
---
-ALTER TABLE `yeucau`
-  MODIFY `MaYC` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
