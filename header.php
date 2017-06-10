@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="jQuery/jquery-3.1.1.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -25,19 +26,19 @@
         interval: 5000 //changes the speed
     })
     </script>
-	
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/full-slider.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-	
-	
-	
+
+
+
 	<link href="sm.css" rel="stylesheet">
-	
-	
+
+
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -49,11 +50,11 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
-    
+
     <link href="css/search.css" rel="stylesheet">
-    
-    
-    
+
+
+
     <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -68,9 +69,8 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-    
-    
-    
-	
+
+
+
+
 	<?php require("connection.php"); ?>
-	
