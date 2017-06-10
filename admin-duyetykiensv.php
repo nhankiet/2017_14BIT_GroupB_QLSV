@@ -106,7 +106,7 @@
               else {
                 alert ('Hủy duyệt thành công!');
               }
-              reload();
+              //reload();
             }
             });
             function reload()
@@ -162,6 +162,16 @@ $(document).ready(function(){
 	  {
 	   load_data();
 	  }
+	});
+	$("#btn-chuaduyet").click(function(){
+		var dkm = $('#chonsel').val();
+		load_data(dkm);
+		alert("DKM CUOC DOI PHE CAN");
+	});
+	$("#btn-duyet").click(function(){
+		var dkm = $('#chonsel').val();
+		load_data(dkm);
+		alert("DKM CUOC DOI PHE CAN TAP 2");
 	});
 });
 
