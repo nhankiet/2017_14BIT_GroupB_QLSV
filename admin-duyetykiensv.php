@@ -83,7 +83,42 @@
         <h4 class="modal-title">Chi tiết yêu cầu</h4>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
 
+=======
+        <script type="text/javascript">
+         var MaYC=1;
+          function getVal(value)
+          {
+            MaYC=value;
+            $.post("admin-duyetykiensv2-ajax.php", { MaYC:MaYC }, function(data, status){
+            if(status=="success")
+            {
+              $("#landing1").html(data);
+            }
+            });
+          }
+          function duyet(value)
+          {
+            var trangthai=value;
+            $.post("admin-duyetykiensv3-ajax.php", { MaYC:MaYC, trangthai:trangthai }, function(data, status){
+            if(status=="success")
+            {
+              if(trangthai==1)
+                alert ('Duyệt thành công!');
+              else {
+                alert ('Hủy duyệt thành công!');
+              }
+              //reload();
+            }
+            });
+            function reload()
+            {
+              location.reload();
+            }
+          }
+         </script>
+>>>>>>> e1e0e5e3a5fe79b2f3cd507a119612b3301e1dcc
          <table class="table table-user-information">
 
            <tbody id='landing1'></tbody>
@@ -131,6 +166,16 @@ $(document).ready(function(){
 	  {
 	   load_data();
 	  }
+	});
+	$("#btn-chuaduyet").click(function(){
+		var dkm = $('#chonsel').val();
+		load_data(dkm);
+		alert("DKM CUOC DOI PHE CAN");
+	});
+	$("#btn-duyet").click(function(){
+		var dkm = $('#chonsel').val();
+		load_data(dkm);
+		alert("DKM CUOC DOI PHE CAN TAP 2");
 	});
 });
 
