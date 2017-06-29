@@ -24,16 +24,19 @@
 
       <table class="table table-hover">
         <thead>
+      <th><label>Nhập MSSV</label></th>
+
 		  <th><label>Chọn loại yêu cầu</label></th>
-      <th><label>Chọn loại trạng thái</label></th>
+      <th><label>Chọn trạng thái</label></th>
         </thead>
 
 
         <tbody>
           <tr>
+      <td><input class="input-lg" type="text" placeholder="Nhập MSSV" name="ttsinhvien" id="ttsinhvien" required=""></td>
 			<td>
 				<select class="input-lg" id="chonsel">
-					<option>Mời chọn</option>
+					<option value="">Mời chọn</option>
             <option value="Xin nghỉ học">Xin nghỉ học</option>
             <option value="Xin tạm hoãn học tập và bảo lưu kết quả">Xin tạm hoãn học tập và bảo lưu kết quả</option>
             <option value="Xin giấy xác nhận sinh viên">Xin giấy xác nhận sinh viên</option>
@@ -44,16 +47,15 @@
 				</optgroup>
 				</select>
 			</td>
-      <!-- Nâng cấp thêm thanh search theo mssv gửi yêu cầu -->
-    <!-- Nâng cấp thêm chức năng filter vs trạng thái duyệt và chưa duyệt <td>
+    <td>
 				<select class="input-lg" id="chonsel1">
-					<option>Mời chọn</option>
-            <option value="1">Đã duyệt</option>
+					<option value="">Mời chọn</option>
+            <option value="1">Đã duyệt</option>y
             <option value="0">Chưa duyệt</option>
           </select>
 				</optgroup>
 				</select>
-			</td> -->
+			</td>
           </tr>
 
         </tbody>
@@ -83,9 +85,7 @@
         <h4 class="modal-title">Chi tiết yêu cầu</h4>
       </div>
       <div class="modal-body">
-<<<<<<< HEAD
 
-=======
         <script type="text/javascript">
          var MaYC=1;
           function getVal(value)
@@ -112,13 +112,9 @@
               //reload();
             }
             });
-            function reload()
-            {
-              location.reload();
-            }
           }
          </script>
->>>>>>> e1e0e5e3a5fe79b2f3cd507a119612b3301e1dcc
+
          <table class="table table-user-information">
 
            <tbody id='landing1'></tbody>
@@ -141,7 +137,6 @@
 
 <script>
 $(document).ready(function(){
-
 	 load_data();
 
 	 function load_data(query)
@@ -161,22 +156,67 @@ $(document).ready(function(){
 	  if(search != '')
 	  {
 	   load_data(search);
+      $('#chonsel1').prop('selectedIndex',0);
 	  }
 	  else
 	  {
 	   load_data();
+       $('#chonsel1').prop('selectedIndex',0);
 	  }
 	});
+
 	$("#btn-chuaduyet").click(function(){
-		var dkm = $('#chonsel').val();
-		load_data(dkm);
-		alert("DKM CUOC DOI PHE CAN");
+		var loaiyc = $('#chonsel').val();
+		var trangthai = $('#chonsel1').val();
+    $.post("admin-duyetykiensv4-ajax.php", {loaiyc:loaiyc, trangthai:trangthai }, function(data, status){
+      if(status=="success")
+      {
+        $('#landing').html(data);
+      }
+      else {
+        load_data();
+      }
+      });
 	});
 	$("#btn-duyet").click(function(){
-		var dkm = $('#chonsel').val();
-		load_data(dkm);
-		alert("DKM CUOC DOI PHE CAN TAP 2");
+    var loaiyc = $('#chonsel').val();
+    var trangthai = $('#chonsel1').val();
+    $.post("admin-duyetykiensv4-ajax.php", {loaiyc:loaiyc, trangthai:trangthai }, function(data, status){
+      if(status=="success")
+      {
+        $('#landing').html(data);
+      }
+      else {
+        load_data();
+      }
+      });
 	});
+  $('#chonsel1').change(function(){
+    var loaiyc=$('#chonsel').val();
+    var  trangthai=$('#chonsel1').val();
+  $.post("admin-duyetykiensv4-ajax.php", {loaiyc:loaiyc, trangthai:trangthai }, function(data, status){
+    if(status=="success")
+    {
+      $('#landing').html(data);
+    }
+    else {
+      load_data();
+    }
+    });
+ });
+
+ $('#ttsinhvien').keyup(function(){
+  var mssv = $(this).val();
+  $.post("admin-duyetykiensv5-ajax.php", { mssv:mssv }, function(data, status){
+    if(status=="success")
+    {
+      $('#landing').html(data);
+    }
+    else {
+      load_data();
+    }
+    });
+ });
 });
 
 var MaYC=1;
@@ -204,7 +244,6 @@ var MaYC=1;
 
      var search=$('#chonsel').val();
     load_data(search);
-    
    }
    });
  }

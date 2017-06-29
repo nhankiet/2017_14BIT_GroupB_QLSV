@@ -32,7 +32,7 @@
         <tbody>
           <tr>
             <td><input class="input-lg" type="text" placeholder="Nhập MSSV/Họ&Tên/Lớp" name="ttsinhvien" id="ttsinhvien" required=""></td>
-            
+
 			<td>
 				<select class="input-lg" id="chonsel">
 					<option>Mời chọn</option>
@@ -49,7 +49,7 @@
 				</optgroup>
 				</select>
 			</td>
-            
+
           </tr>
 
         </tbody>
@@ -97,7 +97,7 @@ $(document).ready(function(){
 	  }
 	 });
 	});
-	
+
 	$("#chonsel").change(function(){
 		var thongtin = this.value;
 		$.post("admin-timkiemsinhvien-ajax.php", {thongtin: thongtin}, function(data, status){
@@ -107,10 +107,10 @@ $(document).ready(function(){
 			}
 			else
 			{
-				
+
 			}
 		});
-	});	
+	});
 
 
 </script>
