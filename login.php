@@ -33,8 +33,9 @@
 	if($_SESSION["userhoten"]==="SAI")
 	{
 		echo "<script>alert('Tài khoản hoặc mật khẩu không khớp. Vui lòng nhập lại!');</script>";
+		unset($_SESSION["userhoten"]);
 	}
-	unset($_SESSION["userhoten"]);
+	
 ?>
 
 
