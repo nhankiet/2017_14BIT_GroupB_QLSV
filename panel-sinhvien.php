@@ -29,6 +29,7 @@
 
 				<tbody>
 					<tr>
+						<td><a href="sinhvien-xemchitietkh.pp"><div class="btn btn-lg btn-xl">Xem chi tiết khóa học</div></a></td>
 						<td><a href="profile.php"><div class="btn btn-primary btn-lg">Trang thông tin cá nhân</div></a></td>
 						<td><a href="sinhvien-xemdiem.php"><div class="btn btn-lg btn-success">Xem kết quả</div></a></td>
 						<td><a href="doipass.php"><div class="btn btn-lg btn-default">Đổi mật khẩu</div></a></td>
