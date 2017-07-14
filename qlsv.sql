@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2017 at 01:37 PM
+-- Generation Time: Jul 14, 2017 at 10:09 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -44,6 +44,20 @@ INSERT INTO `bomon` (`MaBM`, `TenBM`, `Phong`, `SoDienThoai`, `GVPhuTrach`) VALU
 (6, 'Toàn rời rạc', '903', '0903345112', '24'),
 (7, 'Nhập môn cơ sở dữ liệu', '910', '093987423', '27'),
 (8, 'Data Structure', 'I919', '090587412', '26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chuyencan`
+--
+
+CREATE TABLE `chuyencan` (
+  `MaCC` int(11) NOT NULL,
+  `MaKhoa` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `MaUser` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `Loai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `ThoiDiem` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -198,7 +212,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`MaUser`, `HoTen`, `Phai`, `NgaySinh`, `DiaChi`, `SoDienThoai`, `Email`, `MaLop`, `LoaiUser`, `TinhTrang`, `MatKhau`, `HinhAnh`) VALUES
-(1, 'Diablo', 1, '2016-11-28', '13th Heroes of the Storm', '0909318765', 'diablo@gmail.com', NULL, 1, 'Đang hoạt động', 'ae0536737d1e6a705632a51c4752add8163eb0999facc473a9b057677a8fc50892266130eb32020067e52c1f819cf27f8e13c4a4691fb03139a4270f65d46558', 'http://vignette3.wikia.nocookie.net/diablo/images/0/05/Diablo_Head.jpg/revision/latest?cb=20080910154202'),
+(1, 'Diablo', 1, '2016-11-28', '13th Heroes of the Storm', '0909318765', 'diablo@gmail.com', NULL, 1, 'Đang hoạt động', 'ae0536737d1e6a705632a51c4752add8163eb0999facc473a9b057677a8fc50892266130eb32020067e52c1f819cf27f8e13c4a4691fb03139a4270f65d46558', 'https://vignette3.wikia.nocookie.net/diablo/images/0/05/Diablo_Head.jpg/revision/latest?cb=20080910154202'),
 (2, 'Jaina', 0, '2016-11-04', '20th Heroes of the Storm', '312198765', 'jaina@gmail.com', NULL, 1, 'Đang hoạt động', '2dcb4de9c430ec8cb810c00b9b99f5f26c454fa89b81dda57b720f42ba8043320fc0c76bff5b6d4744a6461c4b18b257261ceea9b1ace4167bd06079708ea239', 'http://orig07.deviantart.net/ef3c/f/2015/350/9/2/lady_jaina_proudmoore_by_ver1sa-d83j231.jpg'),
 (24, 'Nguyễn Văn Hoàng', 1, '1967-01-31', '225 Nguyễn Văn Cừ, P7, Q3', '0903345112', 'nguyenvhoang@gmail.com', NULL, 2, 'Đang hoạt động', 'bcf2971e4191ba6f2ced9f664f0d8bd9fec31ae4a04fb888ad6d5dce36f602c35e67ce81229127aaa8149d0711a79589d46b960316953067bfd26c4edf4665fc', 'https://i.ytimg.com/vi/SJ1Frlv0qFc/hqdefault.jpg'),
 (25, 'Lê Văn Hai', 1, '1987-06-21', '12 Nguyễn Bỉnh Khiêm, P7, Q3', '090978652', 'levhai@gmail.com', NULL, 2, 'Đang hoạt động', '70045ad1f74092013c12d7e2c2be47bba335248d3fad74139eea9d59fd44aa975dc1e319e5123d1c99c118cbd683a02cdb6f5e4780e32ae29632f2baa9a4a998', 'http://www.qatarliving.com/sites/all/themes/qatarliving_v3/images/avatar.jpeg'),
@@ -248,10 +262,10 @@ CREATE TABLE `yeucau` (
 --
 
 INSERT INTO `yeucau` (`MaYC`, `MaUser`, `Loai`, `TieuDe`, `NoiDung`, `ThoiDiemNop`, `TrangThai`) VALUES
-('YC00000001', '35', 'Xin giấy xác nhận sinh viên', 'Xin giấy xác nhận sinh viên', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em xin giấy xác nhận sinh viên. \nEm cảm ơn.\n                         Kim\n', '2017-06-07 13:34:34', 0),
+('YC00000001', '35', 'Xin giấy xác nhận sinh viên', 'Xin giấy xác nhận sinh viên', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em xin giấy xác nhận sinh viên. \nEm cảm ơn.\n                         Kim\n', '2017-06-07 13:34:34', 1),
 ('YC00000002', '35', 'Xin phúc khảo', 'Xin phúc khảo môn Web', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, em làm đơn này xin được phúc khảo bài thi cuối kì môn Advance Web Programming.\r\nEm cảm ơn\r\n                       Kim', '2017-06-07 13:48:55', 0),
 ('YC00000003', '35', 'Xin nghỉ học', 'Đơn xin nghỉ học', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em nghỉ buổi học ngày thứ 6 tới.\r\nEm cảm ơn\r\n                      Kim', '2017-06-07 13:52:26', 1),
-('YC00000004', '34', 'Xin tạm hoãn học tập và bảo lưu kết quả', 'testing', 'ass', '2017-06-09 13:33:07', 0),
+('YC00000004', '34', 'Xin tạm hoãn học tập và bảo lưu kết quả', 'testing', 'ass', '2017-06-09 13:33:07', 1),
 ('YC00000005', '34', 'Xin nghỉ học', 'Xin nghỉ học', 'testing', '2017-06-10 12:31:44', 0);
 
 --
@@ -263,6 +277,12 @@ INSERT INTO `yeucau` (`MaYC`, `MaUser`, `Loai`, `TieuDe`, `NoiDung`, `ThoiDiemNo
 --
 ALTER TABLE `bomon`
   ADD PRIMARY KEY (`MaBM`);
+
+--
+-- Indexes for table `chuyencan`
+--
+ALTER TABLE `chuyencan`
+  ADD PRIMARY KEY (`MaCC`);
 
 --
 -- Indexes for table `khoa`
@@ -304,6 +324,11 @@ ALTER TABLE `yeucau`
 --
 ALTER TABLE `bomon`
   MODIFY `MaBM` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `chuyencan`
+--
+ALTER TABLE `chuyencan`
+  MODIFY `MaCC` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`
 --
