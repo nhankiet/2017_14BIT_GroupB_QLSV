@@ -31,8 +31,9 @@
 					<tr>
 						<td><a href="profile.php"><div class="btn btn-primary btn-lg">Trang thông tin cá nhân</div></a></td>
 						<td><a href="giangvien-themkq.php"><div class="btn btn-lg btn-success">Thêm kết quả </div></a></td>
-						<td><a href="giangvien-xemkq.php"><div class="btn btn-lg btn-info">Xem kết quả</div></a></td>
-						<td><a href="doipass.php"><div class="btn btn-lg btn-default">Đổi mật khẩu</div></a></td>
+                        <td><a href="giangvien-xemkq.php"><div class="btn btn-lg btn-info">Xem kết quả</div></a></td>
+                        <td><a href="giangvien-themchuyencan.php"><div class="btn btn-lg btn-success">Thêm chuyên cần</div></a></td>
+                        <td><a href="doipass.php"><div class="btn btn-lg btn-default">Đổi mật khẩu</div></a></td>
 					</tr>
 					
 				</tbody>

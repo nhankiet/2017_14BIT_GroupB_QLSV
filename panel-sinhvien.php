@@ -37,6 +37,7 @@
 					<tr>
 						<td><a href="sinhvien-guiyeucau.php"><div class="btn btn-lg btn-xl">Gửi yêu cầu</div></a></td>
 						<td><a href="sinhvien-xemchitietkh.php"><div class="btn btn-lg btn-xl">Xem chi tiết khóa học</div></a></td>
+						<td><a href="sinhvien-xemchuyencan.php"><div class="btn btn-lg btn-xl">Xem chuyên cần</div></a></td>
 					</tr>
 					
 				</tbody>

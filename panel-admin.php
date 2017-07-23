@@ -80,6 +80,8 @@
 					<tr>
 						<td colspan="2"><a href="admin-timkiemsinhvien.php"><div class="btn btn-lg btn-success">Duyệt danh sách User</div></a></td>
 						<td colspan="2"><a href="admin-duyetykiensv.php"><div class="btn btn-lg btn-success">Duyệt ý kiến sinh viên</div></a></td>
+						<td colspan="2"><a href="admin-themchuyencan.php"><div class="btn btn-lg btn-success">Thêm chuyên cần</div></a></td>
+						<td colspan="2"><a href="admin-xoachuyencan.php"><div class="btn btn-lg btn-danger">Xóa chuyên cần</div></a></td>
 					</tr>
 
 				</tbody>
