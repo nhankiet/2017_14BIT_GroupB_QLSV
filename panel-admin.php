@@ -74,12 +74,15 @@
 					<tr><td></td></tr>
 
 					<tr>
-						<td colspan="2"><h2>Các chức năng khác Admin</h2></td>
+						<td colspan="2"><h2>Các chức năng khác của Admin</h2></td>
 					</tr>
 
 					<tr>
 						<td colspan="2"><a href="admin-timkiemsinhvien.php"><div class="btn btn-lg btn-success">Duyệt danh sách User</div></a></td>
 						<td colspan="2"><a href="admin-duyetykiensv.php"><div class="btn btn-lg btn-success">Duyệt ý kiến sinh viên</div></a></td>
+					</tr>
+					
+					<tr>
 						<td colspan="2"><a href="admin-themchuyencan.php"><div class="btn btn-lg btn-success">Thêm chuyên cần</div></a></td>
 						<td colspan="2"><a href="admin-xoachuyencan.php"><div class="btn btn-lg btn-danger">Xóa chuyên cần</div></a></td>
 					</tr>

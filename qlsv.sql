@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2017 at 10:09 AM
+-- Generation Time: Jul 26, 2017 at 10:40 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -58,6 +58,13 @@ CREATE TABLE `chuyencan` (
   `Loai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `ThoiDiem` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `chuyencan`
+--
+
+INSERT INTO `chuyencan` (`MaCC`, `MaKhoa`, `MaUser`, `Loai`, `ThoiDiem`) VALUES
+(1, 'CS_Math15BIT', '44', 'Đi trễ', '2017-01-01');
 
 -- --------------------------------------------------------
 
@@ -239,7 +246,8 @@ INSERT INTO `user` (`MaUser`, `HoTen`, `Phai`, `NgaySinh`, `DiaChi`, `SoDienThoa
 (51, 'Nguyễn Thủy Trúc', 0, '1996-10-10', '1 Mai Chí Thọ, Quận 2', '0984563210', 'nttruc@gmail.com', '14BIT2', 3, 'Đang hoạt động', '4d4508a4723de549638f52e94ccaad29906473d69a787e01b02cb6a29f6999798121ff12fc0dbc5de00feb0a742a0e22dd332c39670428e2ade9cd1102b2fcf7', 'http://www.qatarliving.com/sites/all/themes/qatarliving_v3/images/avatar.jpeg'),
 (52, 'Nguyễn Ngô Trần Đức Anh', 1, '1996-07-18', '145/34 Phạm Văn Hai, Quận Tân Bình', '0901297254', 'nntdanh@gmail.com', '14BIT2', 3, 'Đang hoạt động', '68bf6b4fc12fb26a2ceac7aa947b30e2bdf068203d50bc80e1e617541d0bf3750ecb3c73cbf590e45b646523992c6278e59e6e67952f26393b3fc4cb257a5187', 'http://www.qatarliving.com/sites/all/themes/qatarliving_v3/images/avatar.jpeg'),
 (53, 'Phan Đăng Khoa', 1, '1997-02-12', '15 Ngô Tất Tố, P7, Q8', '0901278321', 'phandkhoa@gmail.com', '15BIT', 3, 'Đang hoạt động', '480fa6d0a30831f31d38dee15b64c48aeabadc3008cdf1e566b0975bbea33d583139cb01374c5409743c12b192d021143c2afbfdf7b03f7bc74cddf17c866a76', 'http://img4.wikia.nocookie.net/__cb20140930084424/starcraft/images/3/36/Artanis_SC2_Head4.jpg'),
-(54, 'Lê Thị Huyền', 0, '1997-03-21', '11/2 Cầu Kiệu, P9, Q9', '0963178911', 'lethuyen@gmail.com', '15BIT', 3, 'Đang hoạt động', '92215e4eccbfe91f51b5d2f2b202ec9344c9ce6e4c3113ec569c7a84406b09e91eeac730ea0abc0f5806e07526b6707828f09f782fa08944e63258ba540ef998', 'http://img2.wikia.nocookie.net/__cb20121203112237/starcraft/images/a/a5/SarahKerrigan_HotS_Head3.jpg');
+(54, 'Lê Thị Huyền', 0, '1997-03-21', '11/2 Cầu Kiệu, P9, Q9', '0963178911', 'lethuyen@gmail.com', '15BIT', 3, 'Đang hoạt động', '92215e4eccbfe91f51b5d2f2b202ec9344c9ce6e4c3113ec569c7a84406b09e91eeac730ea0abc0f5806e07526b6707828f09f782fa08944e63258ba540ef998', 'http://img2.wikia.nocookie.net/__cb20121203112237/starcraft/images/a/a5/SarahKerrigan_HotS_Head3.jpg'),
+(55, 'DKM', 1, '0009-01-01', '198uyh', '0391876', 'DKM2173@yahoo.com', NULL, 2, 'Đang hoạt động', 'Dkmdkm1234', 'http://www.qatarliving.com/sites/all/themes/qatarliving_v3/images/avatar.jpeg');
 
 -- --------------------------------------------------------
 
@@ -266,7 +274,8 @@ INSERT INTO `yeucau` (`MaYC`, `MaUser`, `Loai`, `TieuDe`, `NoiDung`, `ThoiDiemNo
 ('YC00000002', '35', 'Xin phúc khảo', 'Xin phúc khảo môn Web', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, em làm đơn này xin được phúc khảo bài thi cuối kì môn Advance Web Programming.\r\nEm cảm ơn\r\n                       Kim', '2017-06-07 13:48:55', 0),
 ('YC00000003', '35', 'Xin nghỉ học', 'Đơn xin nghỉ học', 'Chào giáo vụ, em là Nguyễn Hoàng Kim lớp 14BIT1, cho em nghỉ buổi học ngày thứ 6 tới.\r\nEm cảm ơn\r\n                      Kim', '2017-06-07 13:52:26', 1),
 ('YC00000004', '34', 'Xin tạm hoãn học tập và bảo lưu kết quả', 'testing', 'ass', '2017-06-09 13:33:07', 1),
-('YC00000005', '34', 'Xin nghỉ học', 'Xin nghỉ học', 'testing', '2017-06-10 12:31:44', 0);
+('YC00000005', '34', 'Xin nghỉ học', 'Xin nghỉ học', 'testing', '2017-06-10 12:31:44', 0),
+('YC00000006', '35', 'Xin giấy xác nhận sinh viên', 'DKM DKM DKM', 'DKM LAN 3', '2017-07-18 03:37:21', 1);
 
 --
 -- Indexes for dumped tables
@@ -328,12 +337,12 @@ ALTER TABLE `bomon`
 -- AUTO_INCREMENT for table `chuyencan`
 --
 ALTER TABLE `chuyencan`
-  MODIFY `MaCC` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaCC` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `MaUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `MaUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
