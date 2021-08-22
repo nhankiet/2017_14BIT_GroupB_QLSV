@@ -1,11 +1,14 @@
 # Project-QLSV
 ITEC - GROUP B - Project Management 2017
-Đây là dự án Website quản lý sinh viên của Nhóm B (môn Prject Management), giúp kết nối nhà trường và sinh viên.
+A Website to manage subject, students and faculty by years. Powered by pHp, Bootstrap, jQuery.
 
-Các thành viên
-  Tô Nhân Kiệt
-  Trang Trí Kiệt
-  Lê Ngọc Quỳnh Như
-  Nguyễn Thanh Thế Vinh
-  Châu Đức Hội
+Project Management demo artefact.
+
+Meet the team
+
+- Tô Nhân Kiệt
+- Trang Trí Kiệt
+- Lê Ngọc Quỳnh Như
+- Nguyễn Thanh Thế Vinh
+- Châu Đức Hội
   
